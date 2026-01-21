@@ -1,0 +1,7 @@
+{
+  "name": "Copy of Candle Lit - Lit Your Life",
+  "description": "A premium, modern e-commerce platform for luxury candles, featuring AI-powered scent recommendations and a refined, minimalist aesthetic.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
