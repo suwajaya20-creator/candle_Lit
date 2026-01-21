@@ -1,4 +1,3 @@
-
 import { Product } from './types.ts';
 
 export const PRODUCTS: Product[] = [
@@ -24,12 +23,12 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: '3',
-    name: 'Marble Twist',
-    category: 'Artistic',
+    name: 'Love',
+    category: 'Scented',
     price: 45.00,
-    description: 'A sculptural masterpiece that blends aesthetic design with soft vanilla notes.',
-    image: 'https://images.unsplash.com/photo-1605333396915-47ed6b68a00e?auto=format&fit=crop&q=80&w=800',
-    details: ['Beeswax Blend', 'Sculptural Form', 'Unscented Options Available']
+    description: 'A passionate and romantic blend of fresh crimson roses and soft velvet petals. Designed to ignite the heart.',
+    image: 'https://images.unsplash.com/photo-1572726729207-a78d6ff17d7f?auto=format&fit=crop&q=80&w=800',
+    details: ['Rose Essential Oils', 'Crimson Soy Wax', 'Romantic Ambiance']
   },
   {
     id: '4',
