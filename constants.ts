@@ -1,5 +1,5 @@
 
-import { Product } from './types';
+import { Product } from './types.ts';
 
 export const PRODUCTS: Product[] = [
   {
@@ -36,8 +36,8 @@ export const PRODUCTS: Product[] = [
     name: 'Winter Pine',
     category: 'Seasonal',
     price: 36.00,
-    description: 'The crisp scent of a snow-covered forest captured in a festive tin.',
-    image: 'https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&q=80&w=800',
+    description: 'The crisp scent of a snow-covered forest captured in a festive glass vessel.',
+    image: 'https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&q=80&w=800',
     details: ['Limited Edition', 'Eco-friendly Wick', 'Festive Packaging']
   },
   {
@@ -55,7 +55,7 @@ export const PRODUCTS: Product[] = [
     category: 'Scented',
     price: 34.00,
     description: 'Warm, earthy sandalwood notes that bring grounding energy to any room.',
-    image: 'https://images.unsplash.com/photo-1605651202774-7d573fd3f12d?auto=format&fit=crop&q=80&w=800',
+    image: 'https://images.unsplash.com/photo-1602874801007-bd458bb1b8b6?auto=format&fit=crop&q=80&w=800',
     details: ['Essential Oils', 'Smokeless Burn', 'Reusable Vessel'],
     bestSeller: true
   }

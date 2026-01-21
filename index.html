@@ -12,29 +12,27 @@
         font-family: 'Montserrat', sans-serif;
         background-color: #FDFBF7;
         color: #2D2926;
+        margin: 0;
       }
       h1, h2, h3, h4, .serif {
         font-family: 'Cormorant Garamond', serif;
       }
-      .gold-text {
-        color: #D4AF37;
-      }
-      .bg-cream {
-        background-color: #FDFBF7;
-      }
-      .bg-warm-brown {
-        background-color: #735F4D;
-      }
-      /* Ensure the app is visible immediately */
       #root {
         min-height: 100vh;
         display: flex;
         flex-direction: column;
       }
+      .animate-fadeIn {
+        animation: fadeIn 1s ease-out;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
     </style>
     <script>
       // Shim process for browser environment to prevent "process is not defined" errors
-      window.process = window.process || { env: {} };
+      window.process = window.process || { env: { API_KEY: "" } };
     </script>
     <script type="importmap">
     {
@@ -50,7 +48,6 @@
   </head>
   <body>
     <div id="root"></div>
-    <!-- Explicitly load the entry point module -->
     <script type="module" src="./index.tsx"></script>
   </body>
 </html>
