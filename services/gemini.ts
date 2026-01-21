@@ -2,7 +2,19 @@
 import { GoogleGenAI, Type } from "@google/genai";
 
 export const getScentRecommendation = async (mood: string, setting: string) => {
-  const ai = new GoogleGenAI({ apiKey: process.env.API_KEY || '' });
+  // Safely check for the API key to avoid reference errors in different environments
+  const apiKey = typeof process !== 'undefined' && process.env ? process.env.API_KEY : '';
+  
+  if (!apiKey) {
+    console.warn("Gemini API Key is missing. Scent recommendations will be unavailable.");
+    return {
+      vibeName: "Pure Tranquility",
+      notes: ["Unscented", "Natural Wax", "Clean Air"],
+      description: "We're currently perfecting our AI sommelier. Please check back soon for a custom recommendation!"
+    };
+  }
+
+  const ai = new GoogleGenAI({ apiKey });
   
   try {
     const response = await ai.models.generateContent({
@@ -26,7 +38,8 @@ export const getScentRecommendation = async (mood: string, setting: string) => {
       }
     });
 
-    return JSON.parse(response.text);
+    const text = response.text || "{}";
+    return JSON.parse(text);
   } catch (error) {
     console.error("Gemini Error:", error);
     return null;

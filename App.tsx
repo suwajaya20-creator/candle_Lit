@@ -1,13 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Footer from './components/Footer';
-import Home from './pages/Home';
-import Shop from './pages/Shop';
-import ProductDetail from './pages/ProductDetail';
-import Gifting from './pages/Gifting';
-import Contact from './pages/Contact';
+import Navbar from './components/Navbar.tsx';
+import Footer from './components/Footer.tsx';
+import Home from './pages/Home.tsx';
+import Shop from './pages/Shop.tsx';
+import ProductDetail from './pages/ProductDetail.tsx';
+import Gifting from './pages/Gifting.tsx';
+import Contact from './pages/Contact.tsx';
 
 // Scroll to top on route change
 const ScrollToTop = () => {

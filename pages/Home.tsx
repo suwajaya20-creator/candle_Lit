@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { PRODUCTS } from '../constants';
-import ProductCard from '../components/ProductCard';
-import { getScentRecommendation } from '../services/gemini';
+import { PRODUCTS } from '../constants.ts';
+import ProductCard from '../components/ProductCard.tsx';
+import { getScentRecommendation } from '../services/gemini.ts';
 
 const Home: React.FC = () => {
   const [mood, setMood] = useState('');

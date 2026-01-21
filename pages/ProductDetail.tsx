@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { PRODUCTS } from '../constants';
+import { PRODUCTS } from '../constants.ts';
 
 const ProductDetail: React.FC<{ onAddToCart: (id: string) => void }> = ({ onAddToCart }) => {
   const { id } = useParams<{ id: string }>();
